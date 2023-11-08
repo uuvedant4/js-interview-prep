@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Throttling</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 20px;
+        height: 100vh;
+        width: 100vw;
+      }
+      .container {
+        width: 100%;
+        height: 100%;
+        gap: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid coral;
+      }
+      .container div {
+        font-weight: bold;
+      }
+      .container div span {
+        color: crimson;
+      }
+      .container button {
+        font-size: 20px;
+        padding: 10px;
+        font-weight: bold;
+        width: 120px;
+        height: 40px;
+        outline: none;
+        border: none;
+        background-color: crimson;
+        color: beige;
+        border-radius: 2px;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+      .container button:hover {
+        background-color: #fff;
+        border: 1px solid crimson;
+        color: crimson;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>Counter: <span class="normal-ct"></span></div>
+      <div>Throttled Counter: <span class="debounced-ct"></span></div>
+      <button class="btn"><span>Increment</span></button>
+    </div>
+    <script src="throttling.js"></script>
+  </body>
+</html>
